@@ -13,7 +13,7 @@ if [ -z "${LAST_TODAY_TAG}" ]
 then
     NEW_TAG=${TODAY}_rc0
 else
-    NEW_TAG=$(echo ${LAST_TAG} | awk -F"_rc" '{$NF+=1}{print $0RT}' OFS="_rc" ORS="")
+    NEW_TAG=$(echo ${LAST_TODAY_TAG} | awk -F"_rc" '{$NF+=1}{print $0RT}' OFS="_rc" ORS="")
 fi
 echo ${NEW_TAG}
 
