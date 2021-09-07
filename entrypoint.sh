@@ -2,6 +2,7 @@
 
 TODAY=$(date +%Y%m%d)
 echo "TODAY=${TODAY}"
+git fetch --tags
 git tag -l | tail
 LAST_TODAY_TAG=$(git tag -l | awk "/${TODAY}/" | tail -1)
 echo ${LAST_TODAY_TAG}
