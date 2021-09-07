@@ -1,0 +1,9 @@
+# action.yml
+name: 'Bump date version and tag'
+description: 'Bump a date version with format yyyymmdd_rcn with n being a incremental number'
+outputs:
+  new_tag: # id of output
+    description: 'New tag created'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
